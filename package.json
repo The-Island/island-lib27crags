@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "author": "The Island (git://github.com/The-Island)",
+  "name": "island-lib8a",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Islandio/island-lib27crags.git"
+  },
+  "main": "lib/8a",
+  "dependencies": {
+    "cheerio": "^0.18.0",
+    "moment": "^2.8.4",
+    "request": "~2.27.0",
+    "step": "0.0.5",
+    "underscore": "^1.4.4",
+    "underscore.string": "~2.3.1"
+  },
+  "engines": {
+    "node": "~0.10.26"
+  }
+}

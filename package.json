@@ -10,6 +10,7 @@
   "main": "lib/27crags",
   "dependencies": {
     "cheerio": "^0.18.0",
+    "json2csv": "^2.4.1",
     "moment": "^2.8.4",
     "request": "~2.27.0",
     "step": "0.0.5",

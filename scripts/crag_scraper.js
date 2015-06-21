@@ -11,9 +11,13 @@ console.log('Scraping 27 crags starting on crags page ' + (start || 1) + ' and e
 
 lib27crags.scrapeCrags(start, end, function(err, res) {
   if (err) console.log(err);
-  fs.writeFile('crags.csv', res, function(err) {
+  fs.writeFile('crags.csv', res.asCsv, function(err) {
     if (err) console.log(err);
     console.log('Saved crags.csv');
+    fs.writeFile('crags.json', res.asJSON, function(err) {
+      if (err) console.log(err);
+      console.log('Saved crags.json');
+    });
   });
 });
 

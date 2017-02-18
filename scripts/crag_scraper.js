@@ -20,4 +20,3 @@ lib27crags.scrapeCrags(start, end, function(err, res) {
     });
   });
 });
-

@@ -4,7 +4,7 @@ var lib27crags = require('../lib/27crags');
 var fs = require('fs');
 var request = require('request');
 var _ = require('underscore');
-_.mixin(require('underscore.string'));
+var _s = require('underscore.string');
 var Step = require('Step');
 
 var file = process.argv[2];

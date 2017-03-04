@@ -4,7 +4,7 @@ var lib27crags = require('../lib/27crags');
 var fs = require('fs');
 var request = require('request');
 var _ = require('underscore');
-_.mixin(require('underscore.string'));
+var _s = require('underscore.string');
 var Step = require('Step');
 var csvParse = require('csv-parse');
 var json2csv = require('json2csv');
@@ -29,7 +29,7 @@ Step(
     fs.readFile(file, this);
   },
   // Parse CSV
-  function (err, csv) { 
+  function (err, csv) {
     if (err) return this(err);
     csvParse(csv, this);
   },
@@ -107,18 +107,18 @@ Step(
     }, this);
   },
   function (err, data) {
-    if (err) return this(err); 
+    if (err) return this(err);
     var newFile = file.split('.csv')[0] + '_new.csv';
     var csv = _.map(data, function(d) {
       d = _.map(d, function(el) {
         if (el && el.indexOf(',') !== -1)  {
           el = '\"' + el + '\"';
-        } 
+        }
         return el;
       });
       return d.toString();
     });
-    csv = csv.join('\n'); 
+    csv = csv.join('\n');
     console.log('Added ' + counter + ' crags to Island');
     console.log('Writing to ' + newFile);
     fs.writeFile(newFile, csv, this);

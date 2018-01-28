@@ -7,6 +7,11 @@
     "url": "git://github.com/Islandio/island-lib27crags.git"
   },
   "main": "lib/27crags",
+  "files": [
+    "lib",
+    "resources",
+    "scripts"
+  ],
   "dependencies": {
     "async": "~2.1.4",
     "csv-parse": "^1.2.0",
